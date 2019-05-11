@@ -16,7 +16,6 @@ print("Ready.")
 inputText = input().lower()
 while not "*quit" in inputText:
 	baseLength = len(inputText)
-	words = []
 	for word in wordList:
 		if len(word) > baseLength: continue
 		success = True
@@ -24,6 +23,5 @@ while not "*quit" in inputText:
 			if word.count(char) > inputText.count(char):
 				success = False
 				break
-		if success: words.append(word)
-	print("\n".join(words))
+		if success: print(word)
 	inputText = input().lower()
